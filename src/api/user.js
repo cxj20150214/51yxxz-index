@@ -22,10 +22,3 @@ export function logout() {
     method: 'post'
   })
 }
-export function getfoodList(params) {
-  return request({
-    url: '/vue-admin-template/food/list',
-    method: 'get',
-    params
-  })
-}

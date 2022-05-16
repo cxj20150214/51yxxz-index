@@ -13,7 +13,6 @@ const store = new Vuex.Store({
     settings,
     user
   },
-  state: { width_s: document.documentElement.clientWidth },
   getters
 })
 

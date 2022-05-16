@@ -5,7 +5,7 @@ Vue.use(Router)
 
 /* Layout */
 import Layout from '@/layout'
-import food from '@/views/foodie/index'
+
 /**
  * Note: sub-menu only appear when route children.length >= 1
  * Detail see: https://panjiachen.github.io/vue-element-admin-site/guide/essentials/router-and-nav.html
@@ -19,7 +19,7 @@ import food from '@/views/foodie/index'
  * meta : {
     roles: ['admin','editor']    control the page roles (you can set multiple roles)
     title: 'title'               the name show in sidebar and breadcrumb (recommend set)
-    icon: 'svg-name'             the icon show in the sidebar
+    icon: 'svg-name'/'el-icon-x' the icon show in the sidebar
     breadcrumb: false            if set false, the item will hidden in breadcrumb(default is true)
     activeMenu: '/example/list'  if set path, the sidebar will highlight the path you set
   }
@@ -36,41 +36,7 @@ export const constantRoutes = [
     component: () => import('@/views/login/index'),
     hidden: true
   },
-  {
-    path: '/bind',
-    name: 'bind',
-    component: () => import('@/views/login/bind'),
-    meta: { title: '登录', icon: 'dashboard' },
-    hidden: true
-  },
-  {
-    path: '/echart',
-    name: 'echart',
-    component: () => import('@/views/echart/index'),
-    meta: { title: '数据表', icon: 'dashboard' },
-    hidden: true
-  },
-  {
-    path: '/demo2',
-    name: 'demo2',
-    component: () => import('@/views/echart/demo2'),
-    meta: { title: '数据表', icon: 'dashboard' },
-    hidden: true
-  },
-  {
-    path: '/demo3',
-    name: 'demo3',
-    component: () => import('@/views/echart/demo3'),
-    meta: { title: '数据表', icon: 'dashboard' },
-    hidden: true
-  },
-  {
-    path: '/demo4',
-    name: 'demo4',
-    component: () => import('@/views/echart/demo4'),
-    meta: { title: '数据表', icon: 'dashboard' },
-    hidden: true
-  },
+
   {
     path: '/404',
     component: () => import('@/views/404'),
@@ -80,11 +46,11 @@ export const constantRoutes = [
   {
     path: '/',
     component: Layout,
-    redirect: '/demo3',
+    redirect: '/dashboard',
     children: [{
       path: 'dashboard',
       name: 'Dashboard',
-      component: () => import('@/views/echart/demo3'),
+      component: () => import('@/views/dashboard/index'),
       meta: { title: 'Dashboard', icon: 'dashboard' }
     }]
   },
@@ -94,7 +60,7 @@ export const constantRoutes = [
     component: Layout,
     redirect: '/example/table',
     name: 'Example',
-    meta: { title: 'Example', icon: 'example' },
+    meta: { title: 'Example', icon: 'el-icon-s-help' },
     children: [
       {
         path: 'table',
@@ -123,6 +89,7 @@ export const constantRoutes = [
       }
     ]
   },
+
   {
     path: '/nested',
     component: Layout,
@@ -176,6 +143,7 @@ export const constantRoutes = [
       {
         path: 'menu2',
         component: () => import('@/views/nested/menu2/index'),
+        name: 'Menu2',
         meta: { title: 'menu2' }
       }
     ]

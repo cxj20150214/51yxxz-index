@@ -1,0 +1,55 @@
+body {
+    margin: 0px;
+}
+
+.header1 {
+    width: 90%;
+    height: 105px;
+    margin: 0px auto;
+}
+
+.header2 {
+    width: 100%;
+    height: 45px;
+    margin: 0px auto;
+    background-color: #5A4D4D
+}
+
+.logo {
+    width: 130px;
+    margin-top: 10px;
+}
+
+.menuList {
+    width: 90%;
+    height: 45px;
+}
+
+.menuList ul li {
+    width: 125px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 16px;
+    float: left;
+    position: relative;
+}
+
+.menuList ul li.active {
+    background-color: #6A6767
+}
+
+.menuList ul li a {
+    color: #fff;
+    display: block;
+    position: relative;
+}
+
+.menuList ul li.active a::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 3px;
+    background-color: #F7A934;
+}

@@ -6,15 +6,38 @@
   <title>手机游戏免费下载-最新热门手游推荐-51游戏下载网</title>
   <!-- import CSS -->
   <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-  <link href="/static/css/base.css">
+  <link rel="stylesheet" href="./static/css/base.css" type="text/css" />
+  <link rel="stylesheet" href="./static/css/home.css" type="text/css" />
 </head>
 
 <body>
   <div id="app">
     <el-container>
-      <el-header>{{ message }}</el-header>
-      <el-main>Main</el-main>
-      <el-footer>Footer</el-footer>
+      <el-header height="150px">
+        <el-row class="header1" :gutter="0">
+          <el-col :span="12">
+            <a href="./index.html">
+              <img class="logo" :src="logUrl">
+            </a>
+          </el-col>
+        </el-row>
+        <el-row type="flex" justify="center" class="header2" :gutter="0">
+          <el-col class="menuList">
+            <ul>
+              <!-- <li><a :href="item.link">{{item.value}}</a></li> -->
+              <li class="active"><a href="">首页</a></li>
+              <li><a href="">手机游戏</a></li>
+              <li><a href="">手机应用</a></li>
+              <li><a href="">专题合集</a></li>
+              <li><a href="">游戏攻略</a></li>
+              <li><a href="">电脑软件</a></li>
+              <li><a href="">软件教程</a></li>
+            </ul>
+          </el-col>
+        </el-row>
+      </el-header>
+      <el-main></el-main>
+      <el-footer></el-footer>
     </el-container>
   </div>
 </body>
@@ -25,14 +48,40 @@
   }
 </style>
 <!-- import Vue before Element -->
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+<script src="./static/js/vue.js"></script>
 <!-- import JavaScript -->
 <script src="https://unpkg.com/element-ui/lib/index.js"></script>
 <script>
   var app = new Vue({
     el: '#app',
     data: {
-      message: 'Hello Vue!'
+      message: 'Hello Vue!',
+      logUrl: "./static/img/logo.png",
+      menuList: [{
+        value: '首页',
+        link: '',
+      }, {
+        value: '手机游戏',
+        link: '',
+      }, {
+        value: '手机应用',
+        link: '',
+      }, {
+        value: '专题合集',
+        link: '',
+      }, {
+        value: '游戏攻略',
+        link: '',
+      }, {
+        value: '电脑软件',
+        link: '',
+      }, {
+        value: '软件教程',
+        link: '',
+      }, ]
+    },
+    created() {
+
     }
   })
 </script>

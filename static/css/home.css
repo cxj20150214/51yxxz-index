@@ -38,6 +38,10 @@ body {
     background-color: #6A6767
 }
 
+.menuList ul li:hover {
+    background-color: #6A6767
+}
+
 .menuList ul li a {
     color: #fff;
     display: block;

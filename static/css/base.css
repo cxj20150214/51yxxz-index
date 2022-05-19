@@ -76,3 +76,7 @@ body {
 .el-header {
     padding: 0px;
 }
+
+.el-main {
+    padding: 20px 0px;
+}

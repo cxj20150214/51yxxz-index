@@ -36,7 +36,20 @@
           </el-col>
         </el-row>
       </el-header>
-      <el-main></el-main>
+      <el-main class="mainClass">
+        <div class="mainBox">
+          <el-row type="flex" justify="space-between" :gutter="20">
+            <el-col :span="17">
+              <div class="taps"></div>
+            </el-col>
+            <el-col :span="7">
+              <div class="taps a"></div>
+              <div class="taps b"></div>
+              <div class="taps c"></div>
+            </el-col>
+          </el-row>
+        </div>
+      </el-main>
       <el-footer></el-footer>
     </el-container>
   </div>

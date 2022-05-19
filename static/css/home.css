@@ -61,26 +61,89 @@ body {
 .mainClass {
     background-color: #E9E9E9;
 }
-.mainBox{
-    width:1200px;
-    margin:0px auto;
+
+.mainBox {
+    width: 1200px;
+    margin: 0px auto;
 }
-.taps{
+
+.taps {
     background-color: #fff;
-    height:500px;
+    height: 500px;
     border-radius: 5px;
+    padding: 15px;
 }
-.taps.a{
+
+.taps.a {
     background-color: #fff;
-    height:calc(33.333333% - 15px);
-    margin-bottom:15px;
+    height: calc(33.333333% - 10px);
+    margin-bottom: 10px;
 }
-.taps.b{
+
+.taps.b {
     background-color: #fff;
-    height:calc(33.333333% - 15px);
-    margin-bottom:15px;
+    height: calc(33.333333% - 10px);
+    margin-bottom: 10px;
 }
-.taps.c{
+
+.taps.c {
     background-color: #fff;
-    height:33.333333%;
+    height: 33.333333%;
+}
+
+.tap_title {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 22px;
+    font-weight: 700;
+    position: relative;
+}
+
+.tap_title:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 8px;
+    width: 10px;
+    height: 24px;
+    border-radius: 5px;
+    background-color: #6E86FB;
+}
+
+.tap_title p {
+    padding-left: 20px;
+}
+
+.tap_title span {
+    color: #6E86FB;
+}
+
+.taps.d .box {
+    height: 400px;
+    background-color: #f2f2f2;
+    margin-top:10px;
+}
+
+.taps.d .box .slide {
+    width: 100%;
+    position: relative;
+}
+
+.taps.d .box .slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.taps.d .box .slide p {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding-left:20px;
+    color: #fff;
+    font-size: 16px;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
 }

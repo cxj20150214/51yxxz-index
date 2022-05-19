@@ -73,6 +73,10 @@ body {
     *zoom: 1
 }
 
+[v-cloak] {
+    display: none
+}
+
 .el-header {
     padding: 0px;
 }

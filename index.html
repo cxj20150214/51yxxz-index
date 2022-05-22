@@ -38,7 +38,7 @@
       </el-header>
       <el-main class="mainClass">
         <div class="mainBox">
-          <el-row type="flex" justify="space-between" :gutter="20">
+          <el-row class="thisRow" type="flex" justify="space-between" :gutter="20">
             <el-col :span="17">
               <div class="taps d">
                 <div class="tap_title">
@@ -75,9 +75,61 @@
                 <div class="tap_title_1">
                   <p>软件</p>
                   <ul class="taps_c">
-                    <li v-for="(item,index) in gameList3"><a :href="item.link"><span>{{index + 1}}</span>{{item.name}}</a></li>
+                    <li v-for="(item,index) in gameList3"><a
+                        :href="item.link"><span>{{index + 1}}</span>{{item.name}}</a></li>
                   </ul>
                 </div>
+              </div>
+            </el-col>
+          </el-row>
+          <el-row class="thisRow" type="flex" justify="space-between" :gutter="20">
+            <el-col :span="24">
+              <div class="taps e">
+                <ul>
+                  <li v-for="item in gameList4">
+                    <a :href="item.link">
+                      <img :src="item.imgUrl">
+                      <p>{{item.tit}}</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="taps f">
+                <el-row type="flex" justify="space-between" :gutter="20">
+                  <el-col :span="17">
+                    <div class="tap_title f">
+                      <p :class="{active:shows == 1}" @mouseover="shows1()" @click="shows1()">手机游戏</p><span>/</span>
+                      <p :class="{active:shows == 2}" @mouseover="shows2()" @click="shows2()">电脑软件</p>
+                    </div>
+                    <ul class="url_f1" v-show="shows == 1">
+                      <li v-for="item in gameList5">
+                        <a :href="item.link">
+                          <img :src="item.imgUrl">
+                          <div class="txt">
+                            <p class="title">{{item.tit}}</p>
+                            <p class="type">{{item.type}}<span>{{item.time}}</span></p>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                    <ul class="url_f1" v-show="shows == 2">
+                      <li v-for="item in gameList6">
+                        <a :href="item.link">
+                          <img :src="item.imgUrl">
+                          <div class="txt">
+                            <p class="title">{{item.tit}}</p>
+                            <p class="type">{{item.type}}<span>{{item.time}}</span></p>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </el-col>
+                  <el-col :span="7">
+                    <div class="tap_title">
+                      <p>小编<span>推荐</span></p>
+                    </div>
+                  </el-col>
+                </el-row>
               </div>
             </el-col>
           </el-row>
@@ -101,7 +153,8 @@
   var app = new Vue({
     el: '#app',
     data: {
-      logUrl: "./static/img/logo.png",
+      logUrl: "./static/img/logo.png", //logo图片地址
+      shows: 1, //控制手机active
       menuList: [{
         value: '首页',
         link: '',
@@ -210,10 +263,178 @@
         name: '7launcher CSGO',
         link: ''
       }],
-
+      gameList4: [{
+        imgUrl: './static/img/20191219025933751.png',
+        link: '#',
+        tit: '香肠派对',
+      }, {
+        imgUrl: './static/img/20191219025933751.png',
+        link: '#',
+        tit: '香肠派对',
+      }, {
+        imgUrl: './static/img/20191219025933751.png',
+        link: '#',
+        tit: '香肠派对',
+      }, {
+        imgUrl: './static/img/20191219025933751.png',
+        link: '#',
+        tit: '香肠派对',
+      }, {
+        imgUrl: './static/img/20191219025933751.png',
+        link: '#',
+        tit: '香肠派对',
+      }, {
+        imgUrl: './static/img/20191219025933751.png',
+        link: '#',
+        tit: '香肠派对',
+      }, {
+        imgUrl: './static/img/20191219025933751.png',
+        link: '#',
+        tit: '香肠派对',
+      }, {
+        imgUrl: './static/img/20191219025933751.png',
+        link: '#',
+        tit: '香肠派对',
+      }],
+      gameList5: [{
+        imgUrl: './static/img/20220302145929680.png',
+        link: '#',
+        tit: '荣耀大天使',
+        time: '05/22',
+        type: "动作冒险",
+        intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
+      }, {
+        imgUrl: './static/img/20220302145929680.png',
+        link: '#',
+        tit: '荣耀大天使',
+        time: '05/22',
+        type: "动作冒险",
+        intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
+      }, {
+        imgUrl: './static/img/20220302145929680.png',
+        link: '#',
+        tit: '荣耀大天使',
+        time: '05/22',
+        type: "动作冒险",
+        intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
+      }, {
+        imgUrl: './static/img/20220302145929680.png',
+        link: '#',
+        tit: '荣耀大天使',
+        time: '05/22',
+        type: "动作冒险",
+        intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
+      }, {
+        imgUrl: './static/img/20220302145929680.png',
+        link: '#',
+        tit: '荣耀大天使',
+        time: '05/22',
+        type: "动作冒险",
+        intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
+      }, {
+        imgUrl: './static/img/20220302145929680.png',
+        link: '#',
+        tit: '荣耀大天使',
+        time: '05/22',
+        type: "动作冒险",
+        intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
+      }, {
+        imgUrl: './static/img/20220302145929680.png',
+        link: '#',
+        tit: '荣耀大天使',
+        time: '05/22',
+        type: "动作冒险",
+        intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
+      }, {
+        imgUrl: './static/img/20220302145929680.png',
+        link: '#',
+        tit: '荣耀大天使',
+        time: '05/22',
+        type: "动作冒险",
+        intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
+      }, {
+        imgUrl: './static/img/20220302145929680.png',
+        link: '#',
+        tit: '荣耀大天使',
+        time: '05/22',
+        type: "动作冒险",
+        intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
+      }],
+      gameList6: [{
+        imgUrl: './static/img/20220426143802944.jpg',
+        link: '#',
+        tit: 'codesoft绿色版 v6.0',
+        time: '05/22',
+        type: "应用工具",
+        intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
+      }, {
+        imgUrl: './static/img/20220426143802944.jpg',
+        link: '#',
+        tit: 'codesoft绿色版 v6.0',
+        time: '05/22',
+        type: "应用工具",
+        intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
+      }, {
+        imgUrl: './static/img/20220426143802944.jpg',
+        link: '#',
+        tit: 'codesoft绿色版 v6.0',
+        time: '05/22',
+        type: "应用工具",
+        intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
+      }, {
+        imgUrl: './static/img/20220426143802944.jpg',
+        link: '#',
+        tit: 'codesoft绿色版 v6.0',
+        time: '05/22',
+        type: "应用工具",
+        intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
+      }, {
+        imgUrl: './static/img/20220426143802944.jpg',
+        link: '#',
+        tit: 'codesoft绿色版 v6.0',
+        time: '05/22',
+        type: "应用工具",
+        intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
+      }, {
+        imgUrl: './static/img/20220426143802944.jpg',
+        link: '#',
+        tit: 'codesoft绿色版 v6.0',
+        time: '05/22',
+        type: "应用工具",
+        intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
+      }, {
+        imgUrl: './static/img/20220426143802944.jpg',
+        link: '#',
+        tit: 'codesoft绿色版 v6.0',
+        time: '05/22',
+        type: "应用工具",
+        intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
+      }, {
+        imgUrl: './static/img/20220426143802944.jpg',
+        link: '#',
+        tit: 'codesoft绿色版 v6.0',
+        time: '05/22',
+        type: "应用工具",
+        intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
+      }, {
+        imgUrl: './static/img/20220426143802944.jpg',
+        link: '#',
+        tit: 'codesoft绿色版 v6.0',
+        time: '05/22',
+        type: "应用工具",
+        intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
+      }]
     },
     created() {
 
+    },
+    methods: {
+      shows1() {
+        this.shows = 1
+      },
+      shows2() {
+        this.shows = 2
+      }
     }
   })
 </script>

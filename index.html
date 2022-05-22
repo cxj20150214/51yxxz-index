@@ -55,9 +55,30 @@
               </div>
             </el-col>
             <el-col :span="7">
-              <div class="taps a"></div>
-              <div class="taps b"></div>
-              <div class="taps c"></div>
+              <div class="taps a">
+                <div class="tap_title_1">
+                  <p>推荐</p>
+                  <ul class="taps_a">
+                    <li v-for="item in gameList1"><a :href="item.link">{{item.name}}</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="taps b">
+                <div class="tap_title_1">
+                  <p>热门</p>
+                  <ul class="taps_b">
+                    <li v-for="item in gameList2"><a :href="item.link">{{item.name}}</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="taps c">
+                <div class="tap_title_1">
+                  <p>软件</p>
+                  <ul class="taps_c">
+                    <li v-for="(item,index) in gameList3"><a :href="item.link"><span>{{index + 1}}</span>{{item.name}}</a></li>
+                  </ul>
+                </div>
+              </div>
             </el-col>
           </el-row>
         </div>
@@ -119,7 +140,77 @@
           title: "测试4",
           imgUrl: "./static/img/banner.jpg"
         }
-      ]
+      ],
+      gameList1: [{
+        name: '超级房车赛',
+        link: ''
+      }, {
+        name: '光环助手',
+        link: ''
+      }, {
+        name: '光与夜之恋',
+        link: ''
+      }, {
+        name: '小黑盒加速器',
+        link: ''
+      }, {
+        name: '我的安吉拉',
+        link: ''
+      }, {
+        name: '洋果子店游戏',
+        link: ''
+      }, {
+        name: '魔法枪3D',
+        link: ''
+      }, {
+        name: '模拟山羊太空废物',
+        link: ''
+      }],
+      gameList2: [{
+        name: '超级房车赛',
+        link: ''
+      }, {
+        name: '光环助手',
+        link: ''
+      }, {
+        name: '光与夜之恋',
+        link: ''
+      }, {
+        name: '小黑盒加速器',
+        link: ''
+      }, {
+        name: '我的安吉拉',
+        link: ''
+      }, {
+        name: '洋果子店游戏',
+        link: ''
+      }, {
+        name: '魔法枪3D',
+        link: ''
+      }, {
+        name: '模拟山羊太空废物',
+        link: ''
+      }],
+      gameList3: [{
+        name: 'vagaa哇嘎最新版',
+        link: ''
+      }, {
+        name: '华为鸿蒙pc系统',
+        link: ''
+      }, {
+        name: 'vagaa哇嘎画时代',
+        link: ''
+      }, {
+        name: '长江雨课堂',
+        link: ''
+      }, {
+        name: '魔兽对战平台修改器',
+        link: ''
+      }, {
+        name: '7launcher CSGO',
+        link: ''
+      }],
+
     },
     created() {
 

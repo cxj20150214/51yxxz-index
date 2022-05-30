@@ -128,6 +128,18 @@
                     <div class="tap_title">
                       <p>小编<span>推荐</span></p>
                     </div>
+                    <ul class="url_f2">
+                      <li v-for="item in gameList7">
+                        <a :href="item.link">
+                          <img :src="item.imgUrl">
+                          <div class="txt">
+                            <p class="title">{{item.tit}}</p>
+                            <p class="type">{{item.type}} |<span>大小：{{item.number}}</span></p>
+                            <div class="detail">查看</div>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
                   </el-col>
                 </el-row>
               </div>
@@ -422,6 +434,42 @@
         tit: 'codesoft绿色版 v6.0',
         time: '05/22',
         type: "应用工具",
+        intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
+      }],
+      gameList7: [{
+        imgUrl: './static/img/20220429110329254.png',
+        link: '#',
+        tit: '屠龙破晓手机最新版',
+        number: '288.2MB',
+        type: "角色扮演",
+        intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
+      }, {
+        imgUrl: './static/img/20220429110329254.png',
+        link: '#',
+        tit: '屠龙破晓手机最新版',
+        number: '288.2MB',
+        type: "角色扮演",
+        intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
+      }, {
+        imgUrl: './static/img/20220429110329254.png',
+        link: '#',
+        tit: '屠龙破晓手机最新版',
+        number: '288.2MB',
+        type: "角色扮演",
+        intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
+      }, {
+        imgUrl: './static/img/20220429110329254.png',
+        link: '#',
+        tit: '屠龙破晓手机最新版',
+        number: '288.2MB',
+        type: "角色扮演",
+        intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
+      }, {
+        imgUrl: './static/img/20220429110329254.png',
+        link: '#',
+        tit: '屠龙破晓手机最新版',
+        number: '288.2MB',
+        type: "角色扮演",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }]
     },

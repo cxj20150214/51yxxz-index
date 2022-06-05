@@ -610,9 +610,14 @@ body {
 .url_f4 li .type {
     color: #999;
 }
-
-.url_f4 li .type span {
+.el-rate__icon{
+    margin-right: 0px;
+}
+.el-rate{
     margin-left: 5px;
+}
+.url_f4 li .type span {
+    margin-left: 0px;
 }
 
 .url_f4 li .title {

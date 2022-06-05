@@ -176,11 +176,16 @@
                         <a :href="item.link">
                           <div class="number">{{index+1}}</div>
                           <p class="title1">{{item.tit}}</p>
-                          <div  class="detail">查看</div>
+                          <div class="detail">查看</div>
                           <img :src="item.imgUrl">
                           <div class="txt">
                             <p class="title">{{item.tit}}</p>
-                            <p class="type"><span>大小：{{item.number}}</span></p>
+                            <p class="type">
+                              <span>{{item.number}}</span>
+                              <el-rate v-model="item.value" disabled show-score text-color="#ff9900"
+                                score-template="{value}">
+                              </el-rate>
+                            </p>
                           </div>
                         </a>
                       </li>
@@ -649,56 +654,56 @@
         link: '#',
         tit: '屠龙破晓手机最新版',
         number: '288.2MB',
-        type: "角色扮演",
+        value: "4.0",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
         imgUrl: './static/img/20220429110329254.png',
         link: '#',
         tit: '屠龙破晓手机最新版',
         number: '288.2MB',
-        type: "角色扮演",
+        value: "4.0",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
         imgUrl: './static/img/20220429110329254.png',
         link: '#',
         tit: '屠龙破晓手机最新版',
         number: '288.2MB',
-        type: "角色扮演",
+        value: "4.0",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
         imgUrl: './static/img/20220429110329254.png',
         link: '#',
         tit: '屠龙破晓手机最新版',
         number: '288.2MB',
-        type: "角色扮演",
+        value: "4.0",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
         imgUrl: './static/img/20220429110329254.png',
         link: '#',
         tit: '屠龙破晓手机最新版',
         number: '288.2MB',
-        type: "角色扮演",
+        value: "4.0",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
         imgUrl: './static/img/20220429110329254.png',
         link: '#',
         tit: '屠龙破晓手机最新版',
         number: '288.2MB',
-        type: "角色扮演",
+        value: "4.0",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
         imgUrl: './static/img/20220429110329254.png',
         link: '#',
         tit: '屠龙破晓手机最新版',
         number: '288.2MB',
-        type: "角色扮演",
+        value: "4.0",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
         imgUrl: './static/img/20220429110329254.png',
         link: '#',
         tit: '屠龙破晓手机最新版',
         number: '288.2MB',
-        type: "角色扮演",
+        value: "4.0",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }]
     },
@@ -712,7 +717,7 @@
       shows2() {
         this.shows = 2
       },
-      urlHover(){
+      urlHover() {
         this.url4Hover1 = false
         this.url4Hover = true
       }

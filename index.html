@@ -195,6 +195,117 @@
               </div>
             </el-col>
           </el-row>
+          <!-- mode4 -->
+          <el-row class="thisRow" type="flex" justify="space-between" :gutter="20">
+            <el-col :span="24">
+              <div class="taps g">
+                <el-row type="flex" justify="space-between" :gutter="20">
+                  <el-col :span="17">
+                    <div class="tap_title">
+                      <p>必备<span>软件</span></p>
+                      <a href="#">更多+</a>
+                    </div>
+                    <ul class="url_f5">
+                      <p class="tit">系统软件</p>
+                      <li v-for="item in gameList10">
+                        <a :href="item.link">
+                          <img :src="item.imgUrl">
+                          <p class="title">{{item.tit}}</p>
+                        </a>
+                      </li>
+                    </ul>
+                    <ul class="url_f5">
+                      <p class="tit t2">网络工具</p>
+                      <li v-for="item in gameList10">
+                        <a :href="item.link">
+                          <img :src="item.imgUrl">
+                          <p class="title">{{item.tit}}</p>
+                        </a>
+                      </li>
+                    </ul>
+                    <ul class="url_f5">
+                      <p class="tit t3">安全软件</p>
+                      <li v-for="item in gameList10">
+                        <a :href="item.link">
+                          <img :src="item.imgUrl">
+                          <p class="title">{{item.tit}}</p>
+                        </a>
+                      </li>
+                    </ul>
+                    <ul class="url_f5">
+                      <p class="tit t4">图形图像</p>
+                      <li v-for="item in gameList10">
+                        <a :href="item.link">
+                          <img :src="item.imgUrl">
+                          <p class="title">{{item.tit}}</p>
+                        </a>
+                      </li>
+                    </ul>
+                    <ul class="url_f5">
+                      <p class="tit t5">影音媒体</p>
+                      <li v-for="item in gameList10">
+                        <a :href="item.link">
+                          <img :src="item.imgUrl">
+                          <p class="title">{{item.tit}}</p>
+                        </a>
+                      </li>
+                    </ul>
+                    <ul class="url_f5">
+                      <p class="tit t6">社交聊天</p>
+                      <li v-for="item in gameList10">
+                        <a :href="item.link">
+                          <img :src="item.imgUrl">
+                          <p class="title">{{item.tit}}</p>
+                        </a>
+                      </li>
+                    </ul>
+                    <ul class="url_f5">
+                      <p class="tit t7">游戏工具</p>
+                      <li v-for="item in gameList10">
+                        <a :href="item.link">
+                          <img :src="item.imgUrl">
+                          <p class="title">{{item.tit}}</p>
+                        </a>
+                      </li>
+                    </ul>
+                    <ul class="url_f5">
+                      <p class="tit t8">应用工具</p>
+                      <li v-for="item in gameList10">
+                        <a :href="item.link">
+                          <img :src="item.imgUrl">
+                          <p class="title">{{item.tit}}</p>
+                        </a>
+                      </li>
+                    </ul>
+                  </el-col>
+                  <el-col :span="7">
+                    <div class="tap_title">
+                      <p>电脑软件<span>排行榜</span></p>
+                    </div>
+                    <ul class="url_f4">
+                      <li @mouseover="urlHover()" mouseLeave="urlHover1()" v-for="(item,index) in gameList9">
+                        <a :href="item.link">
+                          <div class="number">{{index+1}}</div>
+                          <p class="title1">{{item.tit}}</p>
+                          <div class="detail">查看</div>
+                          <img :src="item.imgUrl">
+                          <div class="txt">
+                            <p class="title">{{item.tit}}</p>
+                            <p class="type">
+                              <span>{{item.number}}</span>
+                              <el-rate v-model="item.value" disabled show-score text-color="#ff9900"
+                                score-template="{value}">
+                              </el-rate>
+                            </p>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </el-col>
+                </el-row>
+              </div>
+            </el-col>
+          </el-row>
         </div>
       </el-main>
       <el-footer></el-footer>
@@ -705,7 +816,36 @@
         number: '288.2MB',
         value: "4.0",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
-      }]
+      }],
+      gameList10: [{
+        imgUrl: './static/img/20200509034610724.png',
+        link: '#',
+        tit: '鲁大师绿色版',
+        time: '05/22',
+        type: "休闲益智",
+        intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
+      }, {
+        imgUrl: './static/img/20200509034610724.png',
+        link: '#',
+        tit: '鲁大师绿色版',
+        time: '05/22',
+        type: "休闲益智",
+        intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
+      }, {
+        imgUrl: './static/img/20200509034610724.png',
+        link: '#',
+        tit: '鲁大师绿色版',
+        time: '05/22',
+        type: "休闲益智",
+        intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
+      }, {
+        imgUrl: './static/img/20200509034610724.png',
+        link: '#',
+        tit: '鲁大师绿色版',
+        time: '05/22',
+        type: "休闲益智",
+        intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
+      }],
     },
     created() {
 

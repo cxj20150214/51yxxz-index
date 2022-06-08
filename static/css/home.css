@@ -610,12 +610,15 @@ body {
 .url_f4 li .type {
     color: #999;
 }
-.el-rate__icon{
+
+.el-rate__icon {
     margin-right: 0px;
 }
-.el-rate{
+
+.el-rate {
     margin-left: 5px;
 }
+
 .url_f4 li .type span {
     margin-left: 0px;
 }
@@ -679,15 +682,19 @@ body {
     background-color: #6E86FB;
     color: #fff;
 }
-.url_f4 li:nth-child(1) .number{
-    background-color:#FA4E57;
+
+.url_f4 li:nth-child(1) .number {
+    background-color: #FA4E57;
 }
-.url_f4 li:nth-child(2) .number{
-    background-color:#FA7A53;
+
+.url_f4 li:nth-child(2) .number {
+    background-color: #FA7A53;
 }
-.url_f4 li:nth-child(3) .number{
-    background-color:#FBC258;
+
+.url_f4 li:nth-child(3) .number {
+    background-color: #FBC258;
 }
+
 .url_f4 .number {
     width: 20px;
     height: 20px;
@@ -715,3 +722,86 @@ body {
 .url_f4 li:hover .title1 {
     opacity: 0;
 }
+
+.url_f5 {
+    width: calc(25% - 15px);
+    margin-right: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border:1px solid #f2f2f2;
+    margin-top: 10px;
+    float: left;
+}
+
+.url_f5 li {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    /* box-shadow: 0px 3px 5px  rgba(0, 0, 0, 0.1); */
+}
+
+.url_f5 li:hover .title {
+    color: #6E86FB;
+}
+
+.url_f5 li a {
+    display: flex;
+    flex-direction: row;
+}
+
+.url_f5 li .type {
+    text-align: center;
+    color: #999;
+}
+
+.url_f5 li .type span {
+    margin-left: 5px;
+}
+
+.url_f5 li .title {
+    font-size: 14px;
+    text-align: center;
+    color: #333;
+}
+
+.url_f5 li img {
+    width: 20px;
+    margin: 0px auto;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.url_f5 .tit {
+    width:100%;
+    text-align: center;
+    font-size: 16px;
+    background-color: #409EFF;
+    color: #fff;
+}
+.url_f5 .tit.t2{
+    background-color: #E7ABA3;
+}
+.url_f5 .tit.t3{
+    background-color: #96C6E6;
+}
+.url_f5 .tit.t4{
+    background-color: #9BDAE0;
+}
+.url_f5 .tit.t5{
+    background-color: #A7E29A;
+}
+.url_f5 .tit.t6{
+    background-color: #A3ADDB;
+}
+.url_f5 .tit.t7{
+    background-color: #E7ABA3;
+}
+.url_f5 .tit.t8{
+    background-color: #96C6E6;
+}
+
+.url_f5 li .type {}

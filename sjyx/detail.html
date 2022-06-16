@@ -5,10 +5,11 @@
   <meta charset="UTF-8">
   <title>手机游戏免费下载-最新热门手游推荐-51游戏下载网</title>
   <!-- import CSS -->
-  <link rel = "icon" type = "image/x-icon" href ="./static/img/061322355837_0image.ico">
+  <link rel="icon" type="image/x-icon" href="../static/img/061322355837_0image.ico">
   <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-  <link rel="stylesheet" href="./static/css/base.css" type="text/css" />
-  <link rel="stylesheet" href="./static/css/home.css" type="text/css" />
+  <link rel="stylesheet" href="../static/css/base.css" type="text/css" />
+  <link rel="stylesheet" href="../static/css/home.css" type="text/css" />
+  <link rel="stylesheet" href="../static/css/detail.css" type="text/css" />
 </head>
 
 <body>
@@ -17,7 +18,7 @@
       <el-header height="150px">
         <el-row class="header1" :gutter="0">
           <el-col :span="12">
-            <a href="./index.html">
+            <a href="../index.html">
               <img class="logo" :src="logUrl">
             </a>
           </el-col>
@@ -43,16 +44,56 @@
           <el-row class="thisRow" type="flex" justify="space-between" :gutter="20">
             <el-col :span="17">
               <div class="taps d">
-                <div class="tap_title">
-                  <p>最近<span>新游榜</span></p>
+                <div class="linkList">
+                  <a href="">首页</a> > <a href="">手机游戏</a> > <a href="">叫我大掌柜最新正版</a>
                 </div>
-                <div class="box">
-                  <el-carousel height="400px" class="slide" indicator-position="outside">
-                    <el-carousel-item v-for="(item,index) in bannerList" :key="index">
-                      <img :src="item.imgUrl" alt="">
-                      <p>{{item.title}}</p>
-                    </el-carousel-item>
-                  </el-carousel>
+                <div class="box1">
+                  <img class="imgbg" src="../static/img/20200509034610724.png" alt="">
+                  <div class="bg">
+                    <img class="imglogo" src="../static/img/20200509034610724.png" alt="">
+                    <div class="txtBox">
+                      <h1>叫我大掌柜最新正版</h1>
+                      <div class="attr">
+                        <dl>
+                          <dt>类型：</dt>
+                          <dd>经营养成</dd>
+                        </dl>
+                        <dl>
+                          <dt>版本：</dt>
+                          <dd>v4.0.0</dd>
+                        </dl>
+                        <dl>
+                          <dt>语言：</dt>
+                          <dd>简体中文</dd>
+                        </dl>
+                        <dl>
+                          <dt>大小：</dt>
+                          <dd>504.83MB</dd>
+                        </dl>
+                        <dl>
+                          <dt>等级：</dt>
+                          <dd>
+                            <el-rate class="rate" v-model="rate" disabled text-color="#ff9900">
+                            </el-rate>
+                          </dd>
+                        </dl>
+                        <dl>
+                          <dt>更新：</dt>
+                          <dd>2022-03-24</dd>
+                        </dl>
+                        <dl>
+                          <dt>厂商：</dt>
+                          <dd>上海北岚网络科技有限公司</dd>
+                        </dl>
+                      </div>
+                    </div>
+                    <div class="txtBox1">
+                      1
+                    </div>
+                    <div class="txtBox2">
+                      1
+                    </div>
+                  </div>
                 </div>
               </div>
             </el-col>
@@ -84,371 +125,6 @@
               </div>
             </el-col>
           </el-row>
-          <!-- mode2 -->
-          <el-row class="thisRow" type="flex" justify="space-between" :gutter="20">
-            <el-col :span="24">
-              <div class="taps e">
-                <ul>
-                  <li v-for="item in gameList4">
-                    <a :href="item.link">
-                      <img :src="item.imgUrl">
-                      <p>{{item.tit}}</p>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="taps f">
-                <el-row type="flex" justify="space-between" :gutter="20">
-                  <el-col :span="17">
-                    <div class="tap_title f">
-                      <p :class="{active:shows == 1}" @mouseover="shows1()" @click="shows1()">手机游戏</p><span>/</span>
-                      <p :class="{active:shows == 2}" @mouseover="shows2()" @click="shows2()">电脑软件</p>
-                    </div>
-                    <ul class="url_f1" v-show="shows == 1">
-                      <li v-for="item in gameList5">
-                        <a :href="item.link">
-                          <img :src="item.imgUrl">
-                          <div class="txt">
-                            <p class="title">{{item.tit}}</p>
-                            <p class="type">{{item.type}}<span>{{item.time}}</span></p>
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-                    <ul class="url_f1" v-show="shows == 2">
-                      <li v-for="item in gameList6">
-                        <a :href="item.link">
-                          <img :src="item.imgUrl">
-                          <div class="txt">
-                            <p class="title">{{item.tit}}</p>
-                            <p class="type">{{item.type}}<span>{{item.time}}</span></p>
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-                  </el-col>
-                  <el-col :span="7">
-                    <div class="tap_title">
-                      <p>小编<span>推荐</span></p>
-                    </div>
-                    <ul class="url_f2">
-                      <li v-for="item in gameList7">
-                        <a :href="item.link">
-                          <img :src="item.imgUrl">
-                          <div class="txt">
-                            <p class="title">{{item.tit}}</p>
-                            <p class="type">{{item.type}} |<span>大小：{{item.number}}</span></p>
-                            <div class="detail">查看</div>
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-                  </el-col>
-                </el-row>
-              </div>
-            </el-col>
-          </el-row>
-          <!-- mode3 -->
-          <el-row class="thisRow" type="flex" justify="space-between" :gutter="20">
-            <el-col :span="24">
-              <div class="taps g">
-                <el-row type="flex" justify="space-between" :gutter="20">
-                  <el-col :span="17">
-                    <div class="tap_title">
-                      <p>热门<span>手游</span></p>
-                      <a href="#">更多+</a>
-                    </div>
-                    <ul class="url_f3">
-                      <li v-for="item in gameList8">
-                        <a :href="item.link">
-                          <img :src="item.imgUrl">
-                          <p class="title">{{item.tit}}</p>
-                          <p class="type">{{item.type}}</p>
-                        </a>
-                      </li>
-                    </ul>
-                  </el-col>
-                  <el-col :span="7">
-                    <div class="tap_title">
-                      <p>必备游戏<span>排行榜</span></p>
-                    </div>
-                    <ul class="url_f4">
-                      <li @mouseover="urlHover()" mouseLeave="urlHover1()" v-for="(item,index) in gameList9">
-                        <a :href="item.link">
-                          <div class="number">{{index+1}}</div>
-                          <p class="title1">{{item.tit}}</p>
-                          <div class="detail">查看</div>
-                          <img :src="item.imgUrl">
-                          <div class="txt">
-                            <p class="title">{{item.tit}}</p>
-                            <p class="type">
-                              <span>{{item.number}}</span>
-                              <el-rate v-model="item.value" disabled show-score text-color="#ff9900"
-                                score-template="{value}">
-                              </el-rate>
-                            </p>
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-                  </el-col>
-                </el-row>
-              </div>
-            </el-col>
-          </el-row>
-          <!-- mode4 -->
-          <el-row class="thisRow" type="flex" justify="space-between" :gutter="20">
-            <el-col :span="24">
-              <div class="taps g">
-                <el-row type="flex" justify="space-between" :gutter="20">
-                  <el-col :span="17">
-                    <div class="tap_title">
-                      <p>必备<span>软件</span></p>
-                      <a href="#">更多+</a>
-                    </div>
-                    <ul class="url_f5">
-                      <p class="tit">系统软件</p>
-                      <li v-for="item in gameList10">
-                        <a :href="item.link">
-                          <img :src="item.imgUrl">
-                          <p class="title">{{item.tit}}</p>
-                        </a>
-                      </li>
-                    </ul>
-                    <ul class="url_f5">
-                      <p class="tit t2">网络工具</p>
-                      <li v-for="item in gameList10">
-                        <a :href="item.link">
-                          <img :src="item.imgUrl">
-                          <p class="title">{{item.tit}}</p>
-                        </a>
-                      </li>
-                    </ul>
-                    <ul class="url_f5">
-                      <p class="tit t3">安全软件</p>
-                      <li v-for="item in gameList10">
-                        <a :href="item.link">
-                          <img :src="item.imgUrl">
-                          <p class="title">{{item.tit}}</p>
-                        </a>
-                      </li>
-                    </ul>
-                    <ul class="url_f5">
-                      <p class="tit t4">图形图像</p>
-                      <li v-for="item in gameList10">
-                        <a :href="item.link">
-                          <img :src="item.imgUrl">
-                          <p class="title">{{item.tit}}</p>
-                        </a>
-                      </li>
-                    </ul>
-                    <ul class="url_f5">
-                      <p class="tit t5">影音媒体</p>
-                      <li v-for="item in gameList10">
-                        <a :href="item.link">
-                          <img :src="item.imgUrl">
-                          <p class="title">{{item.tit}}</p>
-                        </a>
-                      </li>
-                    </ul>
-                    <ul class="url_f5">
-                      <p class="tit t6">社交聊天</p>
-                      <li v-for="item in gameList10">
-                        <a :href="item.link">
-                          <img :src="item.imgUrl">
-                          <p class="title">{{item.tit}}</p>
-                        </a>
-                      </li>
-                    </ul>
-                    <ul class="url_f5">
-                      <p class="tit t7">游戏工具</p>
-                      <li v-for="item in gameList10">
-                        <a :href="item.link">
-                          <img :src="item.imgUrl">
-                          <p class="title">{{item.tit}}</p>
-                        </a>
-                      </li>
-                    </ul>
-                    <ul class="url_f5">
-                      <p class="tit t8">应用工具</p>
-                      <li v-for="item in gameList10">
-                        <a :href="item.link">
-                          <img :src="item.imgUrl">
-                          <p class="title">{{item.tit}}</p>
-                        </a>
-                      </li>
-                    </ul>
-                  </el-col>
-                  <el-col :span="7">
-                    <div class="tap_title">
-                      <p>电脑软件<span>排行榜</span></p>
-                    </div>
-                    <ul class="url_f4">
-                      <li @mouseover="urlHover()" mouseLeave="urlHover1()" v-for="(item,index) in gameList9">
-                        <a :href="item.link">
-                          <div class="number">{{index+1}}</div>
-                          <p class="title1">{{item.tit}}</p>
-                          <div class="detail">查看</div>
-                          <img :src="item.imgUrl">
-                          <div class="txt">
-                            <p class="title">{{item.tit}}</p>
-                            <p class="type">
-                              <span>{{item.number}}</span>
-                              <el-rate v-model="item.value" disabled show-score text-color="#ff9900"
-                                score-template="{value}">
-                              </el-rate>
-                            </p>
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-                  </el-col>
-                </el-row>
-              </div>
-            </el-col>
-          </el-row>
-          <!-- mode5 -->
-          <el-row class="thisRow" type="flex" justify="space-between" :gutter="20">
-            <el-col :span="24">
-              <div class="taps g">
-                <el-row type="flex" justify="space-between" :gutter="20">
-                  <el-col :span="17">
-                    <div class="tap_title">
-                      <p>精选<span>游戏</span></p>
-                      <a href="#">更多+</a>
-                    </div>
-                    <ul class="url_f3">
-                      <li v-for="item in gameList8">
-                        <a :href="item.link">
-                          <img :src="item.imgUrl">
-                          <p class="title">{{item.tit}}</p>
-                          <p class="type">{{item.type}}</p>
-                        </a>
-                      </li>
-                    </ul>
-                  </el-col>
-                  <el-col :span="7">
-                    <div class="tap_title">
-                      <p>火爆游戏<span>排行榜</span></p>
-                    </div>
-                    <ul class="url_f4">
-                      <li @mouseover="urlHover()" mouseLeave="urlHover1()" v-for="(item,index) in gameList9">
-                        <a :href="item.link">
-                          <div class="number">{{index+1}}</div>
-                          <p class="title1">{{item.tit}}</p>
-                          <div class="detail">查看</div>
-                          <img :src="item.imgUrl">
-                          <div class="txt">
-                            <p class="title">{{item.tit}}</p>
-                            <p class="type">
-                              <span>{{item.number}}</span>
-                              <el-rate v-model="item.value" disabled show-score text-color="#ff9900"
-                                score-template="{value}">
-                              </el-rate>
-                            </p>
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-                  </el-col>
-                </el-row>
-              </div>
-            </el-col>
-          </el-row>
-          <!-- mode6 -->
-          <el-row class="thisRow" type="flex" justify="space-between" :gutter="20">
-            <el-col :span="24">
-              <div class="taps g h">
-                <el-row :gutter="20">
-                  <el-col :span="24">
-                    <div class="tap_title">
-                      <p>游戏<span>攻略</span></p>
-                      <a href="#">更多+</a>
-                    </div>
-                    <ul class="url_f6">
-                      <li v-for="item in gameList11">
-                        <a :href="item.link">
-                          <img :src="item.imgUrl">
-                          <div class="txtBox">
-                            <p class="title">{{item.tit}}</p>
-                            <p class="type">{{item.intro}}</p>
-                            <div class="detail">查看详情</div>
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-                  </el-col>
-                  <el-col :span="24">
-                    <ul class="url_f7">
-                      <div class="rm">热门</div>
-                      <li v-for="item in gameList12">
-                        <a :href="item.link">
-                          <p class="title">{{item.tit}}</p>
-                          <p class="type">{{item.time}}</p>
-                        </a>
-                      </li>
-                    </ul>
-                    <ul class="url_f7">
-                      <div class="tj">推荐</div>
-                      <li v-for="item in gameList12">
-                        <a :href="item.link">
-                          <p class="title">{{item.tit}}</p>
-                          <p class="type">{{item.time}}</p>
-                        </a>
-                      </li>
-                    </ul>
-                  </el-col>
-                </el-row>
-              </div>
-            </el-col>
-          </el-row>
-          <!-- mode7 -->
-          <el-row class="thisRow" type="flex" justify="space-between" :gutter="20">
-            <el-col :span="24">
-              <div class="taps g h">
-                <el-row :gutter="20">
-                  <el-col :span="24">
-                    <div class="tap_title">
-                      <p>软件<span>教程</span></p>
-                      <a href="#">更多+</a>
-                    </div>
-                    <ul class="url_f6">
-                      <li v-for="item in gameList11">
-                        <a :href="item.link">
-                          <img :src="item.imgUrl">
-                          <div class="txtBox">
-                            <p class="title">{{item.tit}}</p>
-                            <p class="type">{{item.intro}}</p>
-                            <div class="detail">查看详情</div>
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-                  </el-col>
-                  <el-col :span="24">
-                    <ul class="url_f7">
-                      <div class="rm">热门</div>
-                      <li v-for="item in gameList12">
-                        <a :href="item.link">
-                          <p class="title">{{item.tit}}</p>
-                          <p class="type">{{item.time}}</p>
-                        </a>
-                      </li>
-                    </ul>
-                    <ul class="url_f7">
-                      <div class="tj">推荐</div>
-                      <li v-for="item in gameList12">
-                        <a :href="item.link">
-                          <p class="title">{{item.tit}}</p>
-                          <p class="type">{{item.time}}</p>
-                        </a>
-                      </li>
-                    </ul>
-                  </el-col>
-                </el-row>
-              </div>
-            </el-col>
-          </el-row>
         </div>
       </el-main>
       <el-footer></el-footer>
@@ -462,14 +138,15 @@
   }
 </style>
 <!-- import Vue before Element -->
-<script src="./static/js/vue.js"></script>
+<script src="../static/js/vue.js"></script>
 <!-- import JavaScript -->
 <script src="https://unpkg.com/element-ui/lib/index.js"></script>
 <script>
   var app = new Vue({
     el: '#app',
     data: {
-      logUrl: "./static/img/logo.png", //logo图片地址
+      logUrl: "../static/img/logo.png", //logo图片地址
+      rate: 4.0,
       shows: 1, //控制手机active
       menuList: [{
         value: '首页',
@@ -495,19 +172,19 @@
       }, ],
       bannerList: [{
           title: "测试1",
-          imgUrl: "./static/img/banner.jpg"
+          imgUrl: "../static/img/banner.jpg"
         },
         {
           title: "测试2",
-          imgUrl: "./static/img/banner.jpg"
+          imgUrl: "../static/img/banner.jpg"
         },
         {
           title: "测试3",
-          imgUrl: "./static/img/banner.jpg"
+          imgUrl: "../static/img/banner.jpg"
         },
         {
           title: "测试4",
-          imgUrl: "./static/img/banner.jpg"
+          imgUrl: "../static/img/banner.jpg"
         }
       ],
       gameList1: [{
@@ -580,96 +257,96 @@
         link: ''
       }],
       gameList4: [{
-        imgUrl: './static/img/20191219025933751.png',
-        link: './sjyx/detail.html',
+        imgUrl: '../static/img/20191219025933751.png',
+        link: './sjyx',
         tit: '香肠派对',
       }, {
-        imgUrl: './static/img/20191219025933751.png',
+        imgUrl: '../static/img/20191219025933751.png',
         link: '#',
         tit: '香肠派对',
       }, {
-        imgUrl: './static/img/20191219025933751.png',
+        imgUrl: '../static/img/20191219025933751.png',
         link: '#',
         tit: '香肠派对',
       }, {
-        imgUrl: './static/img/20191219025933751.png',
+        imgUrl: '../static/img/20191219025933751.png',
         link: '#',
         tit: '香肠派对',
       }, {
-        imgUrl: './static/img/20191219025933751.png',
+        imgUrl: '../static/img/20191219025933751.png',
         link: '#',
         tit: '香肠派对',
       }, {
-        imgUrl: './static/img/20191219025933751.png',
+        imgUrl: '../static/img/20191219025933751.png',
         link: '#',
         tit: '香肠派对',
       }, {
-        imgUrl: './static/img/20191219025933751.png',
+        imgUrl: '../static/img/20191219025933751.png',
         link: '#',
         tit: '香肠派对',
       }, {
-        imgUrl: './static/img/20191219025933751.png',
+        imgUrl: '../static/img/20191219025933751.png',
         link: '#',
         tit: '香肠派对',
       }],
       gameList5: [{
-        imgUrl: './static/img/20220302145929680.png',
+        imgUrl: '../static/img/20220302145929680.png',
         link: '#',
         tit: '荣耀大天使',
         time: '05/22',
         type: "动作冒险",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20220302145929680.png',
+        imgUrl: '../static/img/20220302145929680.png',
         link: '#',
         tit: '荣耀大天使',
         time: '05/22',
         type: "动作冒险",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20220302145929680.png',
+        imgUrl: '../static/img/20220302145929680.png',
         link: '#',
         tit: '荣耀大天使',
         time: '05/22',
         type: "动作冒险",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20220302145929680.png',
+        imgUrl: '../static/img/20220302145929680.png',
         link: '#',
         tit: '荣耀大天使',
         time: '05/22',
         type: "动作冒险",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20220302145929680.png',
+        imgUrl: '../static/img/20220302145929680.png',
         link: '#',
         tit: '荣耀大天使',
         time: '05/22',
         type: "动作冒险",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20220302145929680.png',
+        imgUrl: '../static/img/20220302145929680.png',
         link: '#',
         tit: '荣耀大天使',
         time: '05/22',
         type: "动作冒险",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20220302145929680.png',
+        imgUrl: '../static/img/20220302145929680.png',
         link: '#',
         tit: '荣耀大天使',
         time: '05/22',
         type: "动作冒险",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20220302145929680.png',
+        imgUrl: '../static/img/20220302145929680.png',
         link: '#',
         tit: '荣耀大天使',
         time: '05/22',
         type: "动作冒险",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20220302145929680.png',
+        imgUrl: '../static/img/20220302145929680.png',
         link: '#',
         tit: '荣耀大天使',
         time: '05/22',
@@ -677,63 +354,63 @@
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }],
       gameList6: [{
-        imgUrl: './static/img/20220426143802944.jpg',
+        imgUrl: '../static/img/20220426143802944.jpg',
         link: '#',
         tit: 'codesoft绿色版 v6.0',
         time: '05/22',
         type: "应用工具",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20220426143802944.jpg',
+        imgUrl: '../static/img/20220426143802944.jpg',
         link: '#',
         tit: 'codesoft绿色版 v6.0',
         time: '05/22',
         type: "应用工具",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20220426143802944.jpg',
+        imgUrl: '../static/img/20220426143802944.jpg',
         link: '#',
         tit: 'codesoft绿色版 v6.0',
         time: '05/22',
         type: "应用工具",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20220426143802944.jpg',
+        imgUrl: '../static/img/20220426143802944.jpg',
         link: '#',
         tit: 'codesoft绿色版 v6.0',
         time: '05/22',
         type: "应用工具",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20220426143802944.jpg',
+        imgUrl: '../static/img/20220426143802944.jpg',
         link: '#',
         tit: 'codesoft绿色版 v6.0',
         time: '05/22',
         type: "应用工具",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20220426143802944.jpg',
+        imgUrl: '../static/img/20220426143802944.jpg',
         link: '#',
         tit: 'codesoft绿色版 v6.0',
         time: '05/22',
         type: "应用工具",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20220426143802944.jpg',
+        imgUrl: '../static/img/20220426143802944.jpg',
         link: '#',
         tit: 'codesoft绿色版 v6.0',
         time: '05/22',
         type: "应用工具",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20220426143802944.jpg',
+        imgUrl: '../static/img/20220426143802944.jpg',
         link: '#',
         tit: 'codesoft绿色版 v6.0',
         time: '05/22',
         type: "应用工具",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20220426143802944.jpg',
+        imgUrl: '../static/img/20220426143802944.jpg',
         link: '#',
         tit: 'codesoft绿色版 v6.0',
         time: '05/22',
@@ -741,35 +418,35 @@
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }],
       gameList7: [{
-        imgUrl: './static/img/20220429110329254.png',
+        imgUrl: '../static/img/20220429110329254.png',
         link: '#',
         tit: '屠龙破晓手机最新版',
         number: '288.2MB',
         type: "角色扮演",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20220429110329254.png',
+        imgUrl: '../static/img/20220429110329254.png',
         link: '#',
         tit: '屠龙破晓手机最新版',
         number: '288.2MB',
         type: "角色扮演",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20220429110329254.png',
+        imgUrl: '../static/img/20220429110329254.png',
         link: '#',
         tit: '屠龙破晓手机最新版',
         number: '288.2MB',
         type: "角色扮演",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20220429110329254.png',
+        imgUrl: '../static/img/20220429110329254.png',
         link: '#',
         tit: '屠龙破晓手机最新版',
         number: '288.2MB',
         type: "角色扮演",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20220429110329254.png',
+        imgUrl: '../static/img/20220429110329254.png',
         link: '#',
         tit: '屠龙破晓手机最新版',
         number: '288.2MB',
@@ -777,126 +454,126 @@
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }],
       gameList8: [{
-        imgUrl: './static/img/20200509034610724.png',
+        imgUrl: '../static/img/20200509034610724.png',
         link: '#',
         tit: '保卫萝卜3',
         time: '05/22',
         type: "休闲益智",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20200509034610724.png',
+        imgUrl: '../static/img/20200509034610724.png',
         link: '#',
         tit: '保卫萝卜3',
         time: '05/22',
         type: "休闲益智",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20200509034610724.png',
+        imgUrl: '../static/img/20200509034610724.png',
         link: '#',
         tit: '保卫萝卜3',
         time: '05/22',
         type: "休闲益智",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20200509034610724.png',
+        imgUrl: '../static/img/20200509034610724.png',
         link: '#',
         tit: '保卫萝卜3',
         time: '05/22',
         type: "休闲益智",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20200509034610724.png',
+        imgUrl: '../static/img/20200509034610724.png',
         link: '#',
         tit: '保卫萝卜3',
         time: '05/22',
         type: "休闲益智",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20200509034610724.png',
+        imgUrl: '../static/img/20200509034610724.png',
         link: '#',
         tit: '保卫萝卜3',
         time: '05/22',
         type: "休闲益智",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20200509034610724.png',
+        imgUrl: '../static/img/20200509034610724.png',
         link: '#',
         tit: '保卫萝卜3',
         time: '05/22',
         type: "休闲益智",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20200509034610724.png',
+        imgUrl: '../static/img/20200509034610724.png',
         link: '#',
         tit: '保卫萝卜3',
         time: '05/22',
         type: "休闲益智",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20200509034610724.png',
+        imgUrl: '../static/img/20200509034610724.png',
         link: '#',
         tit: '保卫萝卜3',
         time: '05/22',
         type: "休闲益智",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20200509034610724.png',
+        imgUrl: '../static/img/20200509034610724.png',
         link: '#',
         tit: '保卫萝卜3',
         time: '05/22',
         type: "休闲益智",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20200509034610724.png',
+        imgUrl: '../static/img/20200509034610724.png',
         link: '#',
         tit: '保卫萝卜3',
         time: '05/22',
         type: "休闲益智",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20200509034610724.png',
+        imgUrl: '../static/img/20200509034610724.png',
         link: '#',
         tit: '保卫萝卜3',
         time: '05/22',
         type: "休闲益智",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20200509034610724.png',
+        imgUrl: '../static/img/20200509034610724.png',
         link: '#',
         tit: '保卫萝卜3',
         time: '05/22',
         type: "休闲益智",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20200509034610724.png',
+        imgUrl: '../static/img/20200509034610724.png',
         link: '#',
         tit: '保卫萝卜3',
         time: '05/22',
         type: "休闲益智",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20200509034610724.png',
+        imgUrl: '../static/img/20200509034610724.png',
         link: '#',
         tit: '保卫萝卜3',
         time: '05/22',
         type: "休闲益智",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20200509034610724.png',
+        imgUrl: '../static/img/20200509034610724.png',
         link: '#',
         tit: '保卫萝卜3',
         time: '05/22',
         type: "休闲益智",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20200509034610724.png',
+        imgUrl: '../static/img/20200509034610724.png',
         link: '#',
         tit: '保卫萝卜3',
         time: '05/22',
         type: "休闲益智",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20200509034610724.png',
+        imgUrl: '../static/img/20200509034610724.png',
         link: '#',
         tit: '保卫萝卜3',
         time: '05/22',
@@ -904,56 +581,56 @@
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }],
       gameList9: [{
-        imgUrl: './static/img/20220429110329254.png',
+        imgUrl: '../static/img/20220429110329254.png',
         link: '#',
         tit: '屠龙破晓手机最新版',
         number: '288.2MB',
         value: 4.0,
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20220429110329254.png',
+        imgUrl: '../static/img/20220429110329254.png',
         link: '#',
         tit: '屠龙破晓手机最新版',
         number: '288.2MB',
         value: 4.0,
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20220429110329254.png',
+        imgUrl: '../static/img/20220429110329254.png',
         link: '#',
         tit: '屠龙破晓手机最新版',
         number: '288.2MB',
         value: 4.0,
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20220429110329254.png',
+        imgUrl: '../static/img/20220429110329254.png',
         link: '#',
         tit: '屠龙破晓手机最新版',
         number: '288.2MB',
         value: 4.0,
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20220429110329254.png',
+        imgUrl: '../static/img/20220429110329254.png',
         link: '#',
         tit: '屠龙破晓手机最新版',
         number: '288.2MB',
         value: 4.0,
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20220429110329254.png',
+        imgUrl: '../static/img/20220429110329254.png',
         link: '#',
         tit: '屠龙破晓手机最新版',
         number: '288.2MB',
         value: 4.0,
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20220429110329254.png',
+        imgUrl: '../static/img/20220429110329254.png',
         link: '#',
         tit: '屠龙破晓手机最新版',
         number: '288.2MB',
         value: 4.0,
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20220429110329254.png',
+        imgUrl: '../static/img/20220429110329254.png',
         link: '#',
         tit: '屠龙破晓手机最新版',
         number: '288.2MB',
@@ -961,28 +638,28 @@
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }],
       gameList10: [{
-        imgUrl: './static/img/20200509034610724.png',
+        imgUrl: '../static/img/20200509034610724.png',
         link: '#',
         tit: '鲁大师绿色版',
         time: '05/22',
         type: "休闲益智",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20200509034610724.png',
+        imgUrl: '../static/img/20200509034610724.png',
         link: '#',
         tit: '鲁大师绿色版',
         time: '05/22',
         type: "休闲益智",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20200509034610724.png',
+        imgUrl: '../static/img/20200509034610724.png',
         link: '#',
         tit: '鲁大师绿色版',
         time: '05/22',
         type: "休闲益智",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20200509034610724.png',
+        imgUrl: '../static/img/20200509034610724.png',
         link: '#',
         tit: '鲁大师绿色版',
         time: '05/22',
@@ -990,28 +667,28 @@
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }],
       gameList11: [{
-        imgUrl: './static/img/20220422102856667.jpg',
+        imgUrl: '../static/img/20220422102856667.jpg',
         link: '#',
         tit: '深空之眼新手攻略大全',
         time: '05/22',
         type: "休闲益智",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20220422102856667.jpg',
+        imgUrl: '../static/img/20220422102856667.jpg',
         link: '#',
         tit: '深空之眼新手攻略大全',
         time: '05/22',
         type: "休闲益智",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20220422102856667.jpg',
+        imgUrl: '../static/img/20220422102856667.jpg',
         link: '#',
         tit: '深空之眼新手攻略大全',
         time: '05/22',
         type: "休闲益智",
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }, {
-        imgUrl: './static/img/20220422102856667.jpg',
+        imgUrl: '../static/img/20220422102856667.jpg',
         link: '#',
         tit: '深空之眼新手攻略大全',
         time: '05/22',
@@ -1019,25 +696,25 @@
         intro: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换，跌宕起伏的精彩挑战，暗黑风格'
       }],
       gameList12: [{
-        imgUrl: './static/img/20220422102856667.jpg',
+        imgUrl: '../static/img/20220422102856667.jpg',
         link: '#',
         time: '05/22',
         type: "休闲益智",
         tit: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换'
       }, {
-        imgUrl: './static/img/20220422102856667.jpg',
+        imgUrl: '../static/img/20220422102856667.jpg',
         link: '#',
         time: '05/22',
         type: "休闲益智",
         tit: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换'
       }, {
-        imgUrl: './static/img/20220422102856667.jpg',
+        imgUrl: '../static/img/20220422102856667.jpg',
         link: '#',
         time: '05/22',
         type: "休闲益智",
         tit: '荣耀大天使手机版是一款沉浸式剧情冒险挑战游戏，不同职业自由切换'
       }, {
-        imgUrl: './static/img/20220422102856667.jpg',
+        imgUrl: '../static/img/20220422102856667.jpg',
         link: '#',
         time: '05/22',
         type: "休闲益智",

@@ -228,8 +228,8 @@
     /* background: #F9F9F9; */
 }
 
-.box2 .title li{
-    width:120px;
+.box2 .title li {
+    width: 120px;
     height: 50px;
     line-height: 50px;
     font-size: 18px;
@@ -237,18 +237,69 @@
     /* border-top:1px solid #f2f2f2;
     border-right: 1px solid #f2f2f2; */
 }
-.box2 .title li.active{
+
+.box2 .title li.active {
     border-top: 3px solid #6E86FB;
     border-bottom: 0px;
     border-right: 1px solid #f2f2f2;
     background-color: #fff;
 }
+
 .box3 {
     width: 100%;
     height: 700px;
     margin-top: 10px;
     background-color: #f2f2f2;
 }
-.taps.d{
+
+.taps.d {
     height: auto;
+}
+
+.box4 {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.taps.d1 {
+    width: 100%;
+    height: 160px;
+    box-shadow: 0px 0px 0px;
+    padding: 0px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.taps.d1 ul {
+    margin-top: 15px;
+    width: 100%;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f2f2f2;
+    height: auto;
+    display: flex;
+}
+
+.taps.d1 ul li {
+    width: 12.5%;
+    float: left;
+    text-align: center;
+}
+
+.taps.d1 ul li img {
+    width: 80px;
+    height: 80px;
+    border-radius: 3px;
+}
+
+.taps.d1 ul li p {
+    margin-top: 10px;
+}
+
+.taps.d1 ul li a:hover {
+    color: #409EFF
+}
+
+.taps.d1 ul li a {
+    display: inline-block;
+    font-size: 14px;
 }

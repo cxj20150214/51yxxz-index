@@ -126,6 +126,21 @@
                 <div class="box3">
                   介绍介绍
                 </div>
+                <div class="box4">
+                  <div class="tap_title">
+                    <p>相关下载</p>
+                  </div>
+                  <div class="taps d1">
+                    <ul>
+                      <li v-for="item in gameList4">
+                        <a :href="item.link">
+                          <img :src="item.imgUrl">
+                          <p>{{item.tit}}</p>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </el-col>
             <el-col :span="7">

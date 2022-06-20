@@ -18,7 +18,7 @@
         <el-row class="header1" :gutter="0">
           <el-col :span="12">
             <a href="./index.html">
-              <img class="logo" :src="logUrl">
+              <img :src="logUrl" class="logo">
             </a>
           </el-col>
           <el-col :span="12">
@@ -469,6 +469,8 @@
 </style>
 <!-- import Vue before Element -->
 <script src="./static/js/vue.js"></script>
+<script src="https://unpkg.com/vue-lazyload/vue-lazyload.js"></script>
+
 <!-- import JavaScript -->
 <script src="https://unpkg.com/element-ui/lib/index.js"></script>
 <script src="./static/js/index.js"></script>

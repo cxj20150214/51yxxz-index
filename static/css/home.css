@@ -417,6 +417,7 @@ body {
     height: 85px;
 }
 
+
 .url_f1 li .txt {
     width: 160px;
     display: flex;
@@ -946,4 +947,36 @@ body {
 .url_f7 li a .type {
     font-size: 14px;
     color: #999;
+}
+
+.input-wrap {
+    height: 38px;
+    border: 2px solid #5A4D4D;
+    overflow: hidden;
+    margin-top: 32px;
+}
+
+.input-wrap .input {
+    float: left;
+    width: 524px;
+    height: 34px;
+    line-height: 34px;
+    padding: 8px 10px;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #999;
+}
+
+.input-wrap .button {
+    width: 72px;
+    height: 34px;
+    font-size: 14px;
+    background: #5A4D4D;
+    color: #FFF;
+    border: none;
+    outline: none;
+    float: right;
+    cursor: pointer;
 }

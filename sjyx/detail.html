@@ -127,7 +127,7 @@
                   介绍介绍
                 </div>
                 <div class="box4">
-                  <div class="tap_title">
+                  <div class="tap_title tap_title_2">
                     <p>相关下载</p>
                   </div>
                   <div class="taps d1">
@@ -136,6 +136,24 @@
                         <a :href="item.link">
                           <img :src="item.imgUrl">
                           <p>{{item.tit}}</p>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="box5">
+                  <div class="tap_title tap_title_2">
+                    <p>其它版本</p>
+                  </div>
+                  <div class="taps d2">
+                    <ul>
+                      <li v-for="item in gameList1">
+                        <a :href="item.link">
+                          <p>{{item.tit}}</p>
+                          <el-rate class="rate" v-model="item.rate" disabled text-color="#ff9900">
+                          </el-rate>
+                          <div class="num">{{item.num}}</div>
+                          <div class="detail">查看详情</div>
                         </a>
                       </li>
                     </ul>

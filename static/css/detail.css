@@ -264,7 +264,7 @@
 
 .taps.d1 {
     width: 100%;
-    height: 160px;
+    height: 130px;
     box-shadow: 0px 0px 0px;
     padding: 0px;
     border-radius: 5px 5px 0px 0px;
@@ -302,4 +302,112 @@
 .taps.d1 ul li a {
     display: inline-block;
     font-size: 14px;
+}
+
+.tap_title_2 {
+    font-size: 18px;
+}
+
+.tap_title_2 p {
+    padding-left: 15px;
+}
+
+.tap_title_2:before {
+    width: 6px;
+    height: 20px;
+    top: 11px;
+}
+
+.box5 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.taps.d2 {
+    height: auto;
+    box-shadow: 0px 0px 0px;
+    padding: 0px;
+}
+
+.taps.d2 ul {
+    margin-top: 15px;
+    width: 100%;
+    padding-bottom: 15px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.taps.d2 ul li {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    font-size: 14px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.taps.d2 ul li a {
+    display: flex;
+    flex-direction: row;
+}
+
+.taps.d2 ul li p {
+    width: 350px;
+}
+
+.taps.d2 ul li .rate {
+    margin-top: 18px;
+    /* font-size: 16px; */
+}
+
+.taps.d2 ul li:hover p {
+    color: #6E86FB
+}
+
+.taps.d2 ul li .detail {
+    width: 80px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 15px;
+    color: #6E86FB;
+    float: right;
+    border: 1px solid #6E86FB;
+    margin-left: 150px;
+    margin-top: 13px;
+}
+
+.taps.d2 ul li .detail:hover {
+    background-color: #6E86FB;
+    color: #fff;
+}
+
+.taps.d2 ul li .num {
+    width: 80px;
+    margin-left: 15px;
+}
+
+.el-rate__icon {
+    font-size: 20px;
+}
+
+.taps.a {
+    background-color: #fff;
+    height: 300px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.taps.b {
+    background-color: #fff;
+    height: 300px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.taps.c {
+    background-color: #fff;
+    height: 300px;
+    padding: 10px;
 }

@@ -1,0 +1,121 @@
+import Highcharts from 'highcharts/highstock';
+import Highcharts3D from 'highcharts/highcharts-3d';
+
+Vue.use(Highcharts)
+Highcharts3D(Highcharts);
+
+  "highcharts": "^10.1.0",
+
+<template>
+  <div class="dashboard-container">
+    <div class="dashboard-text">待开发</div>
+    <div id="container" style="height: 400px"></div>
+  </div>
+</template>
+
+<script>
+import { mapGetters } from "vuex";
+
+import Highcharts from "highcharts/highstock";
+import loadExporting from "highcharts/modules/exporting";
+import exportExcel from "highcharts/modules/export-data.src";
+loadExporting(Highcharts);
+exportExcel(Highcharts);
+
+export default {
+  name: "Dashboard",
+  data() {
+    return {
+      dataList: [
+        {
+          name: "111",
+          y: 0.8,
+     
+        },
+        {
+          name: "222",
+          y: 2.8,
+       
+        },
+        {
+          name: "333",
+          y: 12.8,
+   
+        },
+       {
+          name: "444",
+          y: 17.8,
+   
+        },
+        {
+          name: "555",
+          y: 2.8,
+   
+        },
+        {
+          name: "666",
+          y: 14.8,
+   
+        },
+      ],
+    };
+  },
+  computed: {
+    ...mapGetters(["name"]),
+  },
+  mounted() {
+    this.piedemo();
+    console.log(this.dataList,'dataList')
+  },
+  methods: {
+    piedemo() {
+      Highcharts.chart("container", {
+        chart: {
+          type: "pie",
+          options3d: {
+            enabled: true,
+            alpha: 45,
+            beta: 0,
+          },
+        },
+        title: {
+          text: "2014年某网站不同浏览器访问量占比",
+        },
+        tooltip: {
+          pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>",
+        },
+        plotOptions: {
+          pie: {
+            allowPointSelect: true,
+            cursor: "pointer",
+            depth: 35,
+            dataLabels: {
+              enabled: true,
+              format: "{point.name}",
+            },
+          },
+        },
+        series: [
+          {
+            type: "pie",
+            name: "浏览器占比",
+            data: this.dataList,
+          },
+        ],
+      });
+    },
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+.dashboard {
+  &-container {
+    margin: 30px;
+  }
+  &-text {
+    font-size: 30px;
+    line-height: 46px;
+  }
+}
+</style>
